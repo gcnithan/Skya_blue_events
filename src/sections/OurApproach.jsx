@@ -1,24 +1,30 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEye, FaBullseye, FaLightbulb } from "react-icons/fa";
+import Lottie from "lottie-react";
+import VisionIcon from "../assets/icons/vision.json";
+import MissionIcon from "../assets/icons/mission.json";
+import StrategyIcon from "../assets/icons/strategy.json";
 
 const timelineItems = [
   {
     id: 1,
     title: "Vision",
+    icon: VisionIcon,
     content:
       "To be the premier event management recognized globally for delivering unforgettable experiences that exceed expectations, inspire connections, and create cherished memories for our clients and their guests.",
   },
   {
     id: 2,
     title: "Mission",
+    icon: MissionIcon,
     content:
       "Our mission is to empower businesses to thrive by creating impactful and seamless B2B events. Through our innovative approach, expert planning and personalized solutions, we strive to foster meaningful connections, inspire collaboration, and drive success for our clients and partners.",
   },
   {
     id: 3,
     title: "Strategy",
+    icon: StrategyIcon,
     content:
       "Pursuing Strategic objectives with unwavering dedication, creativity, and a focus on delivering exceptional experiences.",
   },
@@ -52,7 +58,6 @@ const OurApproach = () => {
       </motion.h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
         {/* Left Side - Paragraphs with larger font and semi-bold */}
         <motion.div
           className="space-y-6 text-gray-700 text-xl font-semibold leading-relaxed"
@@ -62,14 +67,18 @@ const OurApproach = () => {
           transition={{ duration: 0.6 }}
         >
           <p>
-            Our mission is to create extraordinary experiences that inspire, captivate, and leave a lasting impact on our clients and their audiences.
+            Our mission is to create extraordinary experiences that inspire,
+            captivate, and leave a lasting impact on our clients and their
+            audiences.
           </p>
           <p>
-            With meticulous planning, innovative concepts, and unwavering dedication, we strive to bring visions to life and deliver seamless, memorable events that exceed expectations.
+            With meticulous planning, innovative concepts, and unwavering
+            dedication, we strive to bring visions to life and deliver seamless,
+            memorable events that exceed expectations.
           </p>
         </motion.div>
 
-        {/* Right Side - Timeline with icons */}
+        {/* Right Side - Timeline with Lottie icons */}
         <motion.div
           className="space-y-8"
           variants={containerVariants}
@@ -77,7 +86,7 @@ const OurApproach = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {timelineItems.map(({ id, title, content }) => (
+          {timelineItems.map(({ id, title, content, icon }) => (
             <motion.div
               key={id}
               className="group relative flex gap-x-4 sm:gap-x-5"
@@ -85,11 +94,14 @@ const OurApproach = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              {/* Icon for each heading */}
-              <div className="relative z-10 flex justify-center items-center w-10 h-10">
-                {title === "Vision" && <FaEye className="text-[#2754C7]" size={28} />}
-                {title === "Mission" && <FaBullseye className="text-[#2754C7]" size={28} />}
-                {title === "Strategy" && <FaLightbulb className="text-[#2754C7]" size={28} />}
+              {/* Lottie Icon */}
+              <div className="relative z-10 flex justify-center items-center w-12 h-12 sm:w-14 sm:h-14">
+                <Lottie
+                  animationData={icon}
+                  loop={true}
+                  autoplay={true}
+                  className="w-12 h-12"
+                />
               </div>
 
               {/* Content */}
