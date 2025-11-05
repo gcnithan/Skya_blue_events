@@ -4,23 +4,24 @@ const stats = [
   {
     id: 1,
     number: 100,
-    label: "On Time Delivery | Adherence to design & plan | In house team to manage critical functional areas",
+    label:
+      "On Time Delivery | Adherence to design & plan | In house team to manage critical functional areas",
   },
   {
     id: 2,
-    number: 5000,
-    label: "global events",
-  },
-  {
-    id: 3,
     number: 3500,
     label: "social events",
   },
-  
+  {
+    id: 3,
+    number: 600,
+    label:
+      "VVIP clients, Political, celebrity and Business class official Event Planner",
+  },
   {
     id: 4,
-    number: 600,
-    label: "VVIP clients, Political, celebrity and Business class official Event Planner",
+    number: 100,
+    label: "global events",
   },
 ];
 
@@ -36,10 +37,10 @@ const AnimatedNumber = ({ number, id }) => {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          
+
           let startTime;
           const duration = 1500;
-          
+
           const animate = (currentTime) => {
             if (!startTime) startTime = currentTime;
             const progress = (currentTime - startTime) / duration;
