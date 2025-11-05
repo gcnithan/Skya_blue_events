@@ -27,7 +27,7 @@ const YoutubeSections = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-10 md:mb-14 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2754C7] mb-3 md:mb-4">
             Some of Our Finest Work
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">

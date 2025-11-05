@@ -1,41 +1,43 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotableEvents = () => {
+  const navigate = useNavigate();
   const events = [
     {
       title: "World Fisheries Day",
       image:
-        "https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/fisheries-img.webp",
     },
     {
       title: "Bhoomi Pooja Income Tax Department",
       image:
-        "https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/itr-image.webp",
     },
     {
-      title: "World Environment Day",
+      title: "ISRO Event",
       image:
-        "https://images.unsplash.com/photo-1606836576983-8b458e75221d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/isro-img.webp",
     },
     {
-      title: "Constitutional Day Celebration",
+      title: "World Food Day Celebration",
       image:
-        "https://images.unsplash.com/photo-1598929438701-ef29ab0bb61a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/health-img.webp",
     },
     {
-      title: "National Unity Conference",
+      title: "Janapara Utsava",
       image:
-        "https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/bheem-image.webp",
     },
     {
-      title: "Digital India Initiative",
+      title: "Democracy Day Celebration",
       image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80",
+        "assets/Democracy.webp",
     },
   ];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-12 md:py-16 lg:py-20">
+    <div className="min-h-screen w-full bg-linear-to-br from-gray-50 via-white to-gray-50 pb-12 md:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading Section */}
         <div className="text-center mb-10 md:mb-14 lg:mb-16">
@@ -49,7 +51,8 @@ const NotableEvents = () => {
 
         {/* View More Button */}
         <div className="flex justify-end mb-6">
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2754C7] text-white font-semibold rounded-lg hover:bg-[#1e3f9f] transition-all duration-300 hover:shadow-lg">
+          <button  onClick={() => navigate("/gallery")}
+          className="cursor-pointer inline-flex items-center gap-2 px-5 py-2.5 bg-[#2754C7] text-white font-semibold rounded-lg hover:bg-[#1e3f9f] transition-all duration-300 hover:shadow-lg">
             View More
             <svg
               className="w-4 h-4"
