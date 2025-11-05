@@ -6,7 +6,7 @@ const Aboutus = () => {
       {/* Left side - Image with card */}
       <div className="relative w-full h-80 md:h-[400px] rounded-lg overflow-hidden shadow-lg">
         <img
-          src="assets/Dhruva.jpg" // Replace with your image URL or import
+          src="assets/Dhruva.webp" // Replace with your image URL or import
           alt="Dhruva Kumar H P"
           className="w-fit h-fit object-contain"
         />
